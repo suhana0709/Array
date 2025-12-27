@@ -1,0 +1,23 @@
+print("Guessing a missing number from 1 to n numbers!")
+print("**If the numbers are not as the condition as given as above then it might not be functional.**\n")
+def missing_num(arr):
+    n = len(arr) + 1
+    exp_sum = n*(n+1) // 2
+    acc_sum = sum(arr)
+    return exp_sum - acc_sum
+    
+length = int(input("Enter the number of digits in the array: "))
+arr = []
+for i in range(1, length):
+    h = int(input(f"Number {i}: "))
+    arr.append(h)
+
+print("The last number will be guessed by the computer!")
+
+r = str(input("Do you want it to be guessed?? (Enter Y/N): "))
+if r.lower() == "y":
+    print("The missing number is: ",missing_num(arr))
+elif r.lower() == "n":
+    print("OK!")
+else:
+    print("Please write Y/N.")
