@@ -1,0 +1,16 @@
+#program to move 0's at the end
+def push_zeros_at_the_end(a, a_size):
+    #zero will hold position where non zero should go
+    zero = 0
+    #nonzero will iterate through the array
+    nonzero = 0
+    while nonzero != a_size:
+        if a[nonzero] != 0:
+            a[nonzero], a[zero] = a[zero], a[nonzero]
+            zero += 1
+        nonzero += 1
+    return a
+a = [0, 2, 6, 0, 9, 0, 5]
+print("Array: ",a)
+print("Array after pushing all the 0's at the end:-")
+print(push_zeros_at_the_end(a, len(a)))
