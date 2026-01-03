@@ -1,0 +1,17 @@
+# program to sort an array in the order (0, 1, 2)
+def sort(a, a_size):
+    zero = []
+    one = []
+    two = []
+    arr = []
+    for i in range(0, a_size):
+        if a[i] == 0:
+            zero.append(a[i])
+        elif a[i] == 1:
+            one.append(a[i])
+        else:
+            two.append(a[i])
+    return zero + one + two
+a = [0, 2, 1, 0, 2, 1, 0, 0]
+print("Array: ",a)
+print("Sorted array: ", sort(a, len(a)))
