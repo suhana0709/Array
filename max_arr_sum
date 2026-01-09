@@ -1,0 +1,14 @@
+def max_arr_sum(a, a_size):
+    max = -999999999999999
+    curr_max = 0
+    for i in range(0, a_size):
+        curr_max = curr_max + a[i]
+        if (max < curr_max):
+            max = curr_max
+        if curr_max < 0:
+            curr_max = 0 
+    return max
+    
+a = [-1, 9, 6, -7, 5, -4, 3]
+print(a)
+print("Max Array Sum: ",max_arr_sum(a, len(a)))
