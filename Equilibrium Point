@@ -1,0 +1,17 @@
+def equilibrium_index(a):
+    total_sum = sum(a)
+    left_sum= 0
+    for i in range(len(a)):
+        total_sum = total_sum - a[i]
+        if left_sum == total_sum:
+            return i
+        left_sum = left_sum + a[i]
+    return -1
+ 
+a = [-1, 5, 6, 9, -5]
+i = equilibrium_index(a)
+print(a)
+if i != -1:
+    print("Equilibrium Index: ",i)
+else:
+    print("No equilibrium index found.")
